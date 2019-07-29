@@ -1,0 +1,25 @@
+.TH man 1 "29 Jul 2019" "1.2" "_printf man page"
+.SH NAME
+.B _printf
+- format and print data
+.SH SYNOPSIS
+_printf FORMAT [ARGUMENT]
+_printf OPTION
+.SH DESCRIPTION
+Print  ARGUMENT(s)  according to FORMAT, or execute according to         OPTION
+
+FORMAT  controls  the  output  as  in  C  printf
+.SH OPTIONS
+.B Handle the next  specifiers:
+        - c for characters.
+        - s for strings.
+        - d for decimals.
+        - i for integers
+.SH SEE ALSO
+.I printf(2), vprintf(2), write(2)
+.SH  REPORT BUGS
+    Report bugs to 901@holbertonschool.com
+    Report bugs to 903@holbertonschool.com
+.SH AUTHOR
+Thomas Montoya Alvarez cohort 9 MED
+Darwin Soto cohort 9 MED
