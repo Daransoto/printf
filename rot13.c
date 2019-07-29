@@ -28,6 +28,7 @@ int rot13(char *cypher)
 		if (b == 53)
 		{
 			_putchar(cypher[a]);
+			printCounter++;
 		}
 	}
 	return (printCounter);
