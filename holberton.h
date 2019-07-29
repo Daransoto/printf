@@ -8,5 +8,7 @@ int _putchar(char c);
 unsigned int print_number(int n, short sign);
 short conv(const char *format, int *i, int *c, va_list *list);
 int print_base(unsigned int number, short base, short upper);
+int print_rev(char *s);
+int rot13(char *cypher);
 
 #endif /* HOLBERTON_H */

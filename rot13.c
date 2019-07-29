@@ -13,8 +13,8 @@ int rot13(char *cypher)
 	int a;
 	int b;
 	int printCounter = 0;
-	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char trans[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
+	char trans[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm ";
 
 
 	for (a = 0; cypher[a] != '\0'; a++)
@@ -23,8 +23,7 @@ int rot13(char *cypher)
 		{
 			if (cypher[a] == in[b])
 			{
-				cypher[a] = trans[b];
-				_putchar(cypher[a]);
+				_putchar(trans[b]);
 				printCounter++;
 				break;
 			}

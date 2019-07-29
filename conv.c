@@ -63,6 +63,7 @@ short conv(const char *format, int *i, int *c, va_list *list)
 short conv2(const char *format, int *i, int *c, va_list *list)
 {
 	unsigned int num;
+	char *str;
 
 	switch (format[*i])
 	{
@@ -72,8 +73,15 @@ short conv2(const char *format, int *i, int *c, va_list *list)
 			return (1);
 		case 'u':
 			num = va_arg(list, int);
-			num = print_number(num, 0);
-			(*c) += num;
+			(*c) += print_number(num, 0);
+			return (1);
+		case 'r':
+			str = va_arg(list, char *);
+			(*c) += print_rev(str);
+			return (1);
+		case 'R':
+			str = va_arg(list, char *);
+			(*c) += rot13(str);
 			return (1);
 		case '%':
 			return (0);
