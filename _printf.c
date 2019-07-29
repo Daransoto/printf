@@ -24,7 +24,10 @@ int _printf(const char *format, ...)
 					return (-1);
 				}
 				if (conv(format, &i, &c, &list))
+				{
+					i++;
 					continue;
+				}
 			}
 			write(1, format + i++, 1);
 			c++;

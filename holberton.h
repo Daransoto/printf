@@ -4,8 +4,9 @@
 #include <stdarg.h>
 int _printf(const char *format, ...);
 int _strlen(char *s);
-unsigned int print_number(int n);
 int _putchar(char c);
+unsigned int print_number(int n, short sign);
 short conv(const char *format, int *i, int *c, va_list *list);
+int print_base(unsigned int number, short base, short upper);
 
 #endif /* HOLBERTON_H */
