@@ -38,10 +38,7 @@ short conv(const char *format, int *i, int *c, va_list *list)
 			(*i)++;
 			(*c) += num;
 			return (1);
-		case '%':
-			return (0);
 		default:
-			 (*i)--;
 			return (0);
 	}
 }
