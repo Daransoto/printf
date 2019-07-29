@@ -19,6 +19,10 @@ int _printf(const char *format, ...)
 			if (format[i] == '%')
 			{
 				i++;
+				if (!format[i])
+				{
+					return (-1);
+				}
 				if (conv(format, &i, &c, &list))
 					continue;
 			}
