@@ -13,7 +13,7 @@ short conv(const char *format, int *i, int *c, va_list *list)
 {
 	char ch, *str;
 	int num, len;
-​
+
 	switch (format[*i])
 	{
 		case 'c':
