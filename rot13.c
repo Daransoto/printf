@@ -15,8 +15,8 @@ int rot13(char *cypher)
 	int printCounter = 0;
 	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char trans[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-​
-​
+
+
 	for (a = 0; cypher[a] != '\0'; a++)
 	{
 		for (b = 0; b <= 52; b++)
