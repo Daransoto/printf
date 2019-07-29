@@ -31,4 +31,3 @@ int rot13(char *cypher)
 	}
 	return (printCounter);
 }
-
