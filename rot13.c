@@ -1,13 +1,9 @@
 #include "holberton.h"
 /**
- * rot13 - encodes into root13
- * @cypher: translation
- *   (* a blank line
- *    * Description: Longer description of the function)?
- *    (* section header: Section description)*
- *     * Return: printcounter
- *
- */
+* rot13 - encodes into rot13
+* @cypher: translation
+* Return: printcounter
+*/
 int rot13(char *cypher)
 {
 	int a;
@@ -16,7 +12,8 @@ int rot13(char *cypher)
 	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char trans[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-
+	if (!cypher)
+		cypher = "";
 	for (a = 0; cypher[a] != '\0'; a++)
 	{
 		for (b = 0; b <= 52; b++)
