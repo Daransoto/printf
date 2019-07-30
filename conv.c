@@ -18,12 +18,12 @@ short conv(const char *format, int *i, int *c, va_list *list)
 	switch (format[*i])
 	{
 		case 'c':
-			ch = (char)va_arg(list, int);
+			ch = (char)va_arg(*list, int);
 			write(1, &ch, 1);
 			(*c)++;
 			return (1);
 		case 's':
-			str = va_arg(list, char *);
+			str = va_arg(*list, char *);
 			if (!str)
 				str = "(null)";
 			len = _strlen(str);
@@ -32,20 +32,20 @@ short conv(const char *format, int *i, int *c, va_list *list)
 			return (1);
 		case 'd':
 		case 'i':
-			num = va_arg(list, int);
+			num = va_arg(*list, int);
 			num = print_number(num, 1);
 			(*c) += num;
 			return (1);
 		case 'b':
-			num = va_arg(list, int);
+			num = va_arg(*list, int);
 			(*c) += print_base(num, 2, 0);
 			return (1);
 		case 'o':
-			num = va_arg(list, int);
+			num = va_arg(*list, int);
 			(*c) += print_base(num, 8, 0);
 			return (1);
 		case 'x':
-			num = va_arg(list, int);
+			num = va_arg(*list, int);
 			(*c) += print_base(num, 16, 0);
 			return (1);
 		default:
@@ -69,30 +69,30 @@ short conv2(const char *format, int *i, int *c, va_list *list)
 	switch (format[*i])
 	{
 		case 'X':
-			num = va_arg(list, int);
+			num = va_arg(*list, int);
 			(*c) += print_base(num, 16, 1);
 			return (1);
 		case 'u':
-			num = va_arg(list, int);
+			num = va_arg(*list, int);
 			(*c) += print_number(num, 0);
 			return (1);
 		case 'r':
-			str = va_arg(list, char *);
+			str = va_arg(*list, char *);
 			(*c) += print_rev(str);
 			return (1);
 		case 'R':
-			str = va_arg(list, char *);
+			str = va_arg(*list, char *);
 			(*c) += rot13(str);
 			return (1);
 		case 'S':
-			str = va_arg(list, char *);
+			str = va_arg(*list, char *);
 			if (!str)
 				str = "(null)";
 			(*c) += spchr(str);
 			return (1);
 		case 'p':
-			p = va_arg(list, int *);
-			(*c) += case_p(p);
+			p = va_arg(*list, int *);
+			(*c) += case_p((long int)p);
 			return (1);
 		case '%':
 			return (0);

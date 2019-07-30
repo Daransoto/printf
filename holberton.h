@@ -10,7 +10,7 @@ short conv(const char *format, int *i, int *c, va_list *list);
 int print_base(unsigned int number, short base, short upper);
 int print_rev(char *s);
 int rot13(char *cypher);
-int case_p(int *ptr);
+int case_p(long int ptr);
 int spchr(char *s);
 
 #endif /* HOLBERTON_H */
