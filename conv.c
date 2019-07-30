@@ -64,6 +64,7 @@ short conv2(const char *format, int *i, int *c, va_list *list)
 {
 	unsigned int num;
 	char *str;
+	int *p;
 
 	switch (format[*i])
 	{
@@ -82,6 +83,16 @@ short conv2(const char *format, int *i, int *c, va_list *list)
 		case 'R':
 			str = va_arg(list, char *);
 			(*c) += rot13(str);
+			return (1);
+		case 'S':
+			str = va_arg(list, char *);
+			if (!str)
+				str = "(null)";
+			(*c) += spchr(str);
+			return (1);
+		case 'p':
+			p = va_arg(list, int *);
+			(*c) += case_p(p);
 			return (1);
 		case '%':
 			return (0);
