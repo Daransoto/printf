@@ -10,7 +10,7 @@ int case_p(long int ptr)
 	int counter = 0, i = 0;
 	char cmp[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c',
 			'd', 'e', 'f'};
-	char ans[32];
+	char ans[16];
 
 	if (!ptr)
 		return (write (1, "(nil)", 5));
