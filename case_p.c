@@ -5,7 +5,7 @@
 * @ptr: pointer
 * Return: print counts
 */
-int case_p(int *ptr)
+int case_p(unsigned long ptr)
 {
 	int counter = 0;
 
