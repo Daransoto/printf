@@ -13,7 +13,7 @@ short conv2(const char *format, int *i, int *c, va_list *list);
 short conv(const char *format, int *i, int *c, va_list *list)
 {
 	char ch, *str;
-	unsigned long num, len;
+	unsigned int num, len;
 
 	switch (format[*i])
 	{
@@ -45,7 +45,7 @@ short conv(const char *format, int *i, int *c, va_list *list)
 			(*c) += print_base(num, 8, 0);
 			return (1);
 		case 'x':
-			num = va_arg(list, long);
+			num = va_arg(list, int);
 			(*c) += print_base(num, 16, 0);
 			return (1);
 		default:
@@ -64,7 +64,7 @@ short conv2(const char *format, int *i, int *c, va_list *list)
 {
 	unsigned int num;
 	char *str;
-	unsigned long p;
+	int *p;
 
 	switch (format[*i])
 	{
@@ -91,7 +91,7 @@ short conv2(const char *format, int *i, int *c, va_list *list)
 			(*c) += spchr(str);
 			return (1);
 		case 'p':
-			p = va_arg(list, unsigned long);
+			p = va_arg(list, int *);
 			(*c) += case_p(p);
 			return (1);
 		case '%':
