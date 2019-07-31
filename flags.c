@@ -81,7 +81,14 @@ int flags2(const char *f, int *i, va_list *list, int n, int h, int p, int s)
 			(*i) += p + s + h;
 			return (ret);
 		default:
-			(*i)--;
-			return (write(1, "%", 1));
+			ret += write(1, "%", 1);
+			if (h)
+				ret += write(1, "#", 1);
+			if (p)
+				ret += write(1, "+", 1);
+			else if (s)
+				ret += write(1, " ", 1);
+			(*i) += p + s + h;
+			return (ret);
 	}
 }
