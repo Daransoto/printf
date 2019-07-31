@@ -12,9 +12,33 @@ FORMAT  controls  the  output  as  in  C  printf
 .SH OPTIONS
 .B Handle the next  specifiers:
         - c for characters.
+
         - s for strings.
-        - d for decimals.
-        - i for integers
+
+       	- d for decimals.
+
+        - i for integers.
+
+	- x for lower case hexadecimal.
+
+	- X for upper case hexadecimal.
+
+	- u for unsigned integer.
+
+	- R encodes into rot13.
+
+	- S translate special chars into ascii.
+
+	- o for unsigned octal.
+
+.SH Flags:
+
+.B Handle the next flags:
+
+	- + force to preceed the result with a plus or minus sign.
+
+	- # used with o, x or X the value is preceeded with 0, 0x or 0X respectively.
+
 .SH SEE ALSO
 .I printf(2), vprintf(2), write(2)
 .SH  REPORT BUGS
