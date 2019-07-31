@@ -14,6 +14,7 @@ short conv(const char *format, int *i, int *c, va_list *list)
 {
 	char ch, *str;
 	unsigned int num, len;
+	int n;
 
 	switch (format[*i])
 	{
@@ -32,9 +33,9 @@ short conv(const char *format, int *i, int *c, va_list *list)
 			return (1);
 		case 'd':
 		case 'i':
-			num = va_arg(*list, int);
-			num = print_number(num, 1);
-			(*c) += num;
+			n = va_arg(*list, int);
+			n = print_number(n, 1);
+			(*c) += n;
 			return (1);
 		case 'b':
 			num = va_arg(*list, int);
@@ -93,6 +94,11 @@ short conv2(const char *format, int *i, int *c, va_list *list)
 		case 'p':
 			p = va_arg(*list, int *);
 			(*c) += case_p((long int)p);
+			return (1);
+		case '+':
+		case ' ':
+		case '#':
+			(*c) += flags(format, i, list);
 			return (1);
 		case '%':
 			return (0);

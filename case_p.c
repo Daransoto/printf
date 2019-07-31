@@ -13,7 +13,7 @@ int case_p(unsigned long int ptr)
 	char ans[16];
 
 	if (!ptr)
-		return (write (1, "(nil)", 5));
+		return (write(1, "(nil)", 5));
 	counter += write(1, "0x", 2);
 	while (ptr / 16)
 	{

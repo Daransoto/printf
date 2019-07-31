@@ -12,5 +12,7 @@ int print_rev(char *s);
 int rot13(char *cypher);
 int case_p(unsigned long int ptr);
 int spchr(char *s);
+int flags(const char *format, int *i, va_list *list);
+int flags2(const char *, int *, va_list *, int, int, int, int);
 
 #endif /* HOLBERTON_H */
