@@ -88,7 +88,7 @@ int flags2(const char *f, int *i, va_list *list, int n, int h, int p, int s)
 				ret += write(1, "+", 1);
 			else if (s)
 				ret += write(1, " ", 1);
-			(*i) += p + s + h;
+			(*i) += p + s + h - 1;
 			return (ret);
 	}
 }
