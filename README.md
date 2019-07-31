@@ -1,5 +1,6 @@
-ireating the printf function.
- on this repo are pieces of the wonderful printf puzzle. they are:\
+**Printf**\
+\
+The files on this repo are pieces of the wonderful printf puzzle. they are:\
 _printf.c: The main function who calls all of the other functions to print formatted text.\
 _putchar.c: Function used to print a single character.\
 _strlen.c: Owr oun implementention of strlen, gives the length of a string.\
@@ -13,4 +14,3 @@ print_number.c: Prints a number.\
 print_reverse.c: Prints a string in reverse order.\
 rot13.c: Prints the rot13 encryption of a given string.\
 spchr.c: Prints special characters on a string (\n, \t, etc), with its ascii code.
-
