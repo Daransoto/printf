@@ -11,6 +11,7 @@ Print  ARGUMENT(s)  according to FORMAT, or execute according to         OPTION
 FORMAT  controls  the  output  as  in  C  printf
 .SH OPTIONS
 .B Handle the next  specifiers:
+
         - c for characters.
 
         - s for strings.
@@ -38,6 +39,8 @@ FORMAT  controls  the  output  as  in  C  printf
 	- + force to preceed the result with a plus or minus sign.
 
 	- # used with o, x or X the value is preceeded with 0, 0x or 0X respectively.
+
+	- ' ' if no sign is going to be written, insert a space before the value.
 
 .SH SEE ALSO
 .I printf(2), vprintf(2), write(2)
